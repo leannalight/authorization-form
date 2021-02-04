@@ -10,9 +10,16 @@
   position: relative;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 600px) {
   .popup__content {
-    width: 100vh;
-    height: clac(100vh - 112px);
+    width: 90%;
+    height: auto;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .popup__content {
+    width: 100%;
+  }
+}
+
