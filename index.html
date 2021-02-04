@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login form">
+  <meta name="author" content="Anna Lee">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Authorization Form</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body class="body-theme">
+  <div class="page-wrapper">
+    <div class="root">
+      <!-- Popup -->
+      <div class="popup popup__login">
+        <div class="popup__content">
+          <img src="./images/close.svg" alt="close icon" class="popup__close">
+          <h3 class="popup__title">Вход</h3>
+          <!-- Форма авторизации-->
+          <form class="popup__form" name="login">
+            <div class="popup__input-container">
+              <label class="popup__label" for="email">Email</label>
+              <input required type="email" name="email" class="popup__input"
+              minlength="2" maxlength="32" placeholder="Введите почту"
+              pattern="^[a-zA-Z0-9_]+([-\.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+(\.[a-zA-Z]{2,})+$">
+              <span class="popup__error-message">Неправильный формат email</span>
+            </div>
+            <div class="popup__input-container">
+              <label class="popup__label" for="password">Пароль</label>
+              <input required type="password" name="password"
+              class="popup__input" minlength="8" maxlength="30"
+              placeholder="Введите пароль">
+              <span class="popup__error-message">Длина пароля должна быть от 8 до 30 символов</span>
+              <span class="popup__error-message popup__error-message_server">Неправильный пароль</span>
+            </div>
+            <button type="submit" class="button popup__button popup__button_disabled">Войти</button>
+            <div class="popup__text-case">
+              <span class="popup__text">или</span>
+              <a href="#" class="popup__connect popup__connect_go">Зарегистрироваться</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- popup -->
+    </div>
+  </div>
+
+</body>
+</html>
